@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+.bnrimg{width: 71px;height:71px;}
+.bnrp{padding: 2px;font-weight: 500;}
+.adh{display: flex;justify-content: space-around;align-items: center; background-color: #471b1b;
+    width: 90%;height: 104px;padding:6px;border-radius: 9px;color: #ffffff;font-size: 18px;font-weight:50;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;gap: 10px;font-family: 'Nunito', sans-serif;}
