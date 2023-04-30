@@ -1,7 +1,4 @@
 import React from 'react'
-import Banner from './pages/Components/Banner/Banner';
-import NavBar from './pages/Components/NavBar/NavBar';
-import NavInfo from './pages/Components/NavInfo/NavInfo';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
