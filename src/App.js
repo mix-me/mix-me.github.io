@@ -1,16 +1,15 @@
-import React from 'react'
+import { setupIonicReact, IonApp, IonContent } from '@ionic/react';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import { Route, Redirect } from 'react-router';
 
-import { playCircle, radio, library, search } from 'ionicons/icons';
+import { home, albums, person, search } from 'ionicons/icons';
 
 import HomePage from './pages/HomePage';
 import RadioPage from './pages/RadioPage';
 import LibraryPage from './pages/LibraryPage';
 import SearchPage from './pages/SearchPage';
-
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -28,14 +27,13 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-
-
-
+setupIonicReact({ mode: 'md' });
 
 function App() {
-  return (
-    <div className="App">
-     <IonReactRouter>
+  return(
+    <IonApp>
+      <IonContent className="ion-padding">
+<IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path="/" to="/home" />
@@ -52,18 +50,18 @@ function App() {
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
-            <IonIcon icon={playCircle} />
-            <IonLabel>Listen now</IonLabel>
+            <IonIcon icon={home} />
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="radio" href="/radio">
-            <IonIcon icon={radio} />
-            <IonLabel>Radio</IonLabel>
+            <IonIcon icon={albums} />
+            <IonLabel>Release</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="library" href="/library">
-            <IonIcon icon={library} />
-            <IonLabel>Library</IonLabel>
+            <IonIcon icon={person} />
+            <IonLabel>Artists</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="search" href="/search">
@@ -73,7 +71,8 @@ function App() {
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
-    </div>
+    </IonContent>
+    </IonApp>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from './Components/Banner/Banner';
-import NavInfo from './Components/NavInfo/NavInfo';
 import { IonContent } from '@ionic/react';
+import Banner from '../Components/Banner/Banner';
+import NavInfo from '../Components/NavInfo/NavInfo';
 
 const HomePage = () => (
   <>

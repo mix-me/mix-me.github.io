@@ -1,13 +1,8 @@
 import React from 'react';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 
 const LibraryPage = () => (
   <>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>Library</IonTitle>
-      </IonToolbar>
-    </IonHeader>
     <IonContent>
       <div
         style={{
