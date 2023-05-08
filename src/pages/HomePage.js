@@ -2,6 +2,8 @@ import React from 'react';
 import { IonContent } from '@ionic/react';
 import Banner from '../Components/Banner/Banner';
 import NavInfo from '../Components/NavInfo/NavInfo';
+import MusicSection from '../Components/MusicSection/MusicSection';
+
 
 const HomePage = () => (
   <>
@@ -9,6 +11,7 @@ const HomePage = () => (
       <div>
       <NavInfo/>
       <Banner/>
+      <MusicSection/>
       </div>
     </IonContent>
   </>

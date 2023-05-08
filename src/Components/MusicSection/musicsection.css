@@ -1,0 +1,31 @@
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollmenu {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+      display: flex;
+    overflow-y: hidden;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+}
+div.scrollmenu a {
+  
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.card{
+	font-size: 10px; text-align: center;
+	  transition: transform 450ms;
+}
+.deti{width:80px; height: 80px;}

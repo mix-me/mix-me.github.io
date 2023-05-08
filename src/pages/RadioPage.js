@@ -4,15 +4,9 @@ import { IonContent } from '@ionic/react';
 const RadioPage = () => (
   <>
     <IonContent>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-        }}
-      >
-        Radio content
+      <div>
+        Alan Jose Santo the musician
+         
       </div>
     </IonContent>
   </>
