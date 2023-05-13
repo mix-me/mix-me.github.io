@@ -1,10 +1,33 @@
+import { useState,useEffect } from 'react';
 import React from 'react'
 import "./Banner.css";
+import {db} from "../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
+
 
 function Banner() {
+  const [opener,setOpener] = useState([]);
+  const openerCollectionRef = collection(db, "opener");
+  useEffect(() => {
+      
+     const getOpener = async () => {
+      const data = await getDocs(openerCollectionRef);
+      setOpener(data.docs.map((doc) => ({...doc.data() , id: doc.id })));
+      
+     };
+      
+      getOpener()
+  }, []) 
+
   return (
-    <div className='adh'>
-<a href="https://realityaudiostudio.github.io/mixme2/sng1.html"><img className='bnrimg' src="https://realityaudiostudio.github.io/img/cp.png" alt="hi" /></a><p className='bnrp'>Holidays Arrived!<br></br> Make Your Christmas Memorable!</p>
+    <div>
+    {opener.map((opener) => {
+      return (<div>
+    <div className='adh' style={{backgroundColor:opener.color}}>
+    
+<a href={opener.link}><img className='bnrimg' src={opener.image} alt="hi" /></a><p className='bnrp'>{opener.desc}</p>
+    </div></div>
+    )})}
     </div>
   )
 }

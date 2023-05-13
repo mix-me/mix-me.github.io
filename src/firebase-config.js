@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from '@firebase/firestore'
+import {getFirestore} from "@firebase/firestore";
 
 // Your web app's Firebase configuration
 
@@ -7,13 +7,21 @@ import {getFirestore} from '@firebase/firestore'
 
 const firebaseConfig = {
 
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+  apiKey: "AIzaSyB7AtWeh-Kz-8TN6uLn3YFP9Z_hBAIpYj8",
+
+  authDomain: "mixmeajs.firebaseapp.com",
+
+  projectId: "mixmeajs",
+
+  storageBucket: "mixmeajs.appspot.com",
+
+  messagingSenderId: "286662713941",
+
+  appId: "1:286662713941:web:df66d8066917b9bd6baadc",
+
+  measurementId: "G-9H3PG08ZBC"
+
+
 
   };
 

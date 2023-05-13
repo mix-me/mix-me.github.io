@@ -10,17 +10,23 @@ function MusicSection() {
         
        const getSongs1 = async () => {
         const data = await getDocs(songsCollectionRef);
-        console.log(data);
+        setSongs1(data.docs.map((doc) => ({...doc.data() , id: doc.id })));
         
-       }
+       };
         
         getSongs1()
     }, [])
     return (
-        <div><p className="subh">What's new |</p>
+        <div>
+            <p className="subh">What's new |</p>
         <div className="scrollmenu">
-<div className="card"><a href="https://realityaudiostudio.github.io/mixme2/sng9.html"><img src="https://realityaudiostudio.github.io/img/kalimg.png" alt="alanjs" className="deti"></img></a><br></br>Kaalpanthin</div>
-        </div></div>
+            {songs1.map((songs) => {
+                return (<div>
+                    
+<div className="card"><a href={songs.link}><img src={songs.image} alt="alanjs" className="deti"></img></a><br></br><p>{songs.name}</p></div>
+        </div> 
+            )})}
+            </div></div>
     )   
 }
   
