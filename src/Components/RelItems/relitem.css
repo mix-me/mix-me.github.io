@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap');
+.muse {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Nunito Sans';
+}
+.muse img {
+    width:90px;
+    height: 90px;
+    border-radius: 14px;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+.player {
+    font-size: 30px;
+    color: #000000;
+  }
+  .sepr{display: flex;
+    align-items: center;
+    gap: 55px;
+}
+.rights{
+    display: block;
+    width: 130px;
+    
+}
+.rights p{margin-top: 8px;
+    font-style: normal;
+font-weight: 300;
+font-size: 15px;;}
+.rights h3{
+    font-style: normal;
+font-weight :bold;
+font-size: 20px;
+}

@@ -4,7 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import { Route, Redirect } from 'react-router';
 
-import { home, albums, person, search } from 'ionicons/icons';
+import { home, albums, person, build } from 'ionicons/icons';
 
 import HomePage from './pages/HomePage';
 import RadioPage from './pages/RadioPage';
@@ -65,8 +65,8 @@ function App() {
           </IonTabButton>
 
           <IonTabButton tab="search" href="/search">
-            <IonIcon icon={search} />
-            <IonLabel>Search</IonLabel>
+            <IonIcon icon={build} />
+            <IonLabel>Devs</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
