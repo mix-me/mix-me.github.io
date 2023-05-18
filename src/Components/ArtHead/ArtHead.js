@@ -1,14 +1,14 @@
 import React from 'react'
-import "./relhead.css";
+import "./arthead.css";
 
-function RelHead() {
+function ArtHead() {
   return (
     <div className='hp'>
-        <h2 className='hdnav'>Releases</h2><p>Get all the music in one!</p>
+        <h2 className='hdnav'>Artists</h2><p>Magicians behind the tunes !</p>
   <div className='liner'></div>
   <div className='heighter'></div>
     </div>
   )
 }
 
-export default RelHead;
+export default ArtHead;
