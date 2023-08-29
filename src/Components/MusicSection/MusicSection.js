@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import "./musicsection.css";
 import {db} from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import { useAppContext } from "../../contextStore/PostContext";
+import { useHistory } from "react-router-dom";
 
 function MusicSection() {
+    const history = useHistory();
+    const [currentsong,setCurrentsong] = useState([]);
+    const {setPostContent}=useAppContext(); 
     const [songs1,setSongs1] = useState([]);
     const songsCollectionRef = collection(db, "songs1");
     useEffect(() => {
@@ -16,6 +21,14 @@ function MusicSection() {
         
         getSongs1()
     }, [])
+
+    const postData=(e, songs)=>{
+        e.preventDefault();
+        setPostContent(songs);
+        history.push(`/view`);
+    
+        }
+
     return (
         <div>
             <p className="subh">What's new |</p>
@@ -23,8 +36,9 @@ function MusicSection() {
             {songs1.map((songs) => {
                 return (<div>
                     
-<div className="card"><a href={songs.link}><img src={songs.image} alt="alanjs" className="deti"></img></a><br></br><p>{songs.name}</p></div>
-        </div> 
+<div className="card"  onClick={(e)=>postData(e,songs)}><p href={songs.link}><img src={songs.image} alt="alanjs" className="deti"></img></p><br></br><p>{songs.name}</p></div>
+        </div> //pas this songs variable into post data
+
             )})}
             </div></div>
     )   

@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import { PostContext } from "../../contextStore/PostContext";
-import { Firebase } from "../../firebase/config";
+import { PostContext, useAppContext } from "../../contextStore/PostContext";
 import { useHistory } from "react-router";
 
 function View() {
-    let { postContent } = useContext(PostContext);//from the global store PostContext we can get information about desired product post that we want to show (the user is clicked item on the card)
-  return (
+ const {postContent}=useAppContext();
+ console.log(postContent);
+    return (
     <div>
-      
+      {postContent.name}<br/>
+      {postContent.link}<br/>
+      {postContent.image}<br/>
+
+
     </div>
   )
 }
