@@ -6,10 +6,8 @@ import { Firebase } from "../../firebase/config";
 import BarLoading from "../Loading/BarLoading";
 import PostCards from "../PostCards/PostCards";
 
-import { AllPostContext } from "../../contextStore/AllPostContext";
 
 function Posts() {
-  const { setAllPost } = useContext(AllPostContext);
   let [posts, setPosts] = useState([]); //for showing all posts in Descending order of date
   let [posts2, setPosts2] = useState([]); //for showing all posts in Ascending order of date
   let [loading, setLoading] = useState(false);

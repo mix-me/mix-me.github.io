@@ -1,4 +1,4 @@
-import React, { createContext,useState } from "react";
+import React, { createContext,useContext,useState } from "react";
 
 
 export const PostContext = createContext()
@@ -12,4 +12,7 @@ const ContextPost =({children})=>{
         </PostContext.Provider>
     )
 }
+export const useAppContext = () => {
+    return useContext(PostContext);
+  };    
 export default ContextPost
