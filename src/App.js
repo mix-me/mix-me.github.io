@@ -26,7 +26,6 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import View from './Components/view/View';
 
 setupIonicReact({ mode: 'md' });
 
@@ -44,8 +43,6 @@ function App() {
           Use the component prop when your component depends on the RouterComponentProps passed in automatically.
         */}
           <Route path="/home" render={() => <HomePage />} exact={true} />
-          <Route path="/view" render={() => <View />} exact={true} />
-
           <Route path="/radio" render={() => <RadioPage />} exact={true} />
           <Route path="/library" render={() => <LibraryPage />} exact={true} />
           <Route path="/search" render={() => <SearchPage />} exact={true} />
