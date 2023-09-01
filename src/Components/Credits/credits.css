@@ -1,0 +1,49 @@
+
+.cred{
+    padding-left: 18px;
+padding-top: 20px;
+}
+.chead{
+    color: #000;
+font-family: Nunito Sans;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+.csb{
+    color: #000;
+font-family: Nunito Sans;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.vara{
+    background:#000000;width:40px;height:4px;
+}
+.logs{
+    width: 90%;
+    height: 30%;
+object-fit: contain;
+padding-left: 100px;
+padding-right: 100px;
+}
+.vishadham{
+    color: #000;
+font-family: Nunito Sans;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media only screen and (min-width: 768px) {
+    .logs{width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .vishadham{
+        width: 50%;
+    }
+  }
