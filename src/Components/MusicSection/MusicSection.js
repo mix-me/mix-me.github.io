@@ -5,7 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 function MusicSection() {
     const [songs1,setSongs1] = useState([]);
-    const songsCollectionRef = collection(db, "songs1");
+    const songsCollectionRef = collection(db, "new");
     useEffect(() => {
         
        const getSongs1 = async () => {
